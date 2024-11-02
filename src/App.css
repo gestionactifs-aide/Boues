@@ -1,0 +1,293 @@
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif; /* Définit Arial comme police par défaut */
+  font-weight: lighter; 
+}
+.Banner-container { /* BANDEAU SUPERIEUR AVEC ADRESSE */
+  width: 100%; /* Ajuste la largeur pour 25px de marge à droite */
+  margin: 0; /* Pas de marge pour toucher les bords */
+  /* border: 1px solid blue; */ /* Bordure temporaire */
+}
+
+.Top-banner { 
+  width: 100%; /* Ajuste la largeur pour une marge de 25px à droite */
+  height: 25px;
+  background-color: #008eb7; /* Couleur identique au titre */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 10px;
+  font-size: 0.5rem;
+  /* border: 1px solid blue; */ /* Bordure temporaire */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+.Banner-left {
+  text-align: left;
+  /* border: 1px solid blue; */ /* Bordure temporaire */
+  margin-left: 5px; /* Décalage supplémentaire pour le texte de droite */
+}
+
+.Banner-right {
+  text-align: right;
+  margin-right: 80px; /* Décalage supplémentaire pour le texte de droite */
+  /* border: 1px solid blue; */ /* Bordure temporaire */
+}
+
+.App-header { /* BANDEAU LOGO et AIDE */
+  width: calc(100% - 20px); /* Ajuste la largeur pour 25px de marge à droite */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  /* border: 1px solid blue; */ /* Bordure temporaire */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+.Logo-container {
+  height: calc(100% - 50px); /* Ajuste la largeur pour une marge de 25px à droite */
+  width: 50px;             /* Hauteur du conteneur d'image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;           /* Centrage horizontal */
+  /* border: 1px solid gray;   /* Bordure temporaire */
+}
+
+.App-logo {
+  width: 100%; /* L’image occupe toute la largeur du conteneur */
+  height: auto; /* Ajuste la hauteur automatiquement pour maintenir les proportions */
+  max-height: 100%; /* Assure que l'image ne dépasse pas la hauteur du conteneur */
+  object-fit: cover; /* Remplit le conteneur sans déformer l’image */
+}
+
+.Title-container { /* TEXTE AIDE */
+  flex: 1; /* Centre le titre horizontalement */
+  display: flex;
+  justify-content: center;
+  margin-right: 80px;
+   /* border: 1px solid blue; */ /* Bordure temporaire */
+}
+
+.App-title {
+  color: black; /* Couleur du titre */
+  font-size: 0.6rem;         /* Taille de la police */
+  text-align: center;
+  font-weight: 1; /* Définit le poids de la police comme normal (affiner le gras) */
+   /* border: 1px solid blue; */ /* Bordure temporaire */
+}
+
+.Project-container {/* CADRE_TEXTE PROJET */
+  text-align: left; /* Centrer le texte */
+  padding-left: 10px; /* Décale le texte de 20px vers la droite */
+  border-bottom: 1px solid #008eb7; /* Bordure temporaire */
+  margin-bottom: 20px;
+  min-height: 10px;
+}
+
+.Project-title {/* TEXTE PROJET */
+  font-size: 0.8em; /* Taille du texte */
+  color: #008eb7; /* Couleur du texte */
+  font-weight: 1; /* Définit le poids de la police comme normal (affiner le gras) */
+  margin-left: 5px;
+}
+
+.Image-container {/* CADRE_IMAGE_SCLESSIN */
+  width: calc(100% - 20px); /* Ajuste la largeur pour une marge de 25px à droite */
+  height: 60px;             /* Hauteur du conteneur d'image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;           /* Centrage horizontal */
+  /* border: 1px solid gray;   /* Bordure temporaire */
+}
+
+.Map-image {/* IMAGE_SCLESSIN */
+  width: 100%; /* L’image occupe toute la largeur du conteneur */
+  height: auto; /* Ajuste la hauteur automatiquement pour maintenir les proportions */
+  max-height: 100%; /* Assure que l'image ne dépasse pas la hauteur du conteneur */
+  object-fit: cover; /* Remplit le conteneur sans déformer l’image */
+}
+
+
+.Map-container { /* CADRE_CARTE_PROVINCE */
+  width: calc(100% - 20px); /* Ajuste la largeur pour 25px de marge à droite */
+  margin: 0 auto; /* Centrage horizontal */
+  border: 1px solid #ccc; /* Bordure temporaire */
+  border-radius: 8px; /* Coins arrondis */
+  overflow: hidden;
+  height: 70vh;
+  background-color: white; /* Fond noir */
+}
+.map-offset {
+  margin-top: 0px;
+}
+
+
+/* src/App.css */
+
+.custom-tooltip,
+
+
+.leaflet-tooltip {/* NOM_SITES */
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  white-space: nowrap;
+  line-height: 1.2;
+  padding: 0;
+  min-width: 100px;
+}
+
+.leaflet-tooltip:before,
+.leaflet-tooltip:after {
+  display: none !important;  /* Supprime le triangle blanc */
+  
+}
+/* Pour forcer le curseur par défaut sur les polygones */
+.leaflet-interactive {
+  cursor: default !important;
+}
+
+
+.dropdown-container {/* CADRE_LISTE_DEROULANTE */
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  z-index: 1000;  /* Assure la superposition de la liste déroulante */
+  background-color: white; /* Optionnel : Assure un fond visible */
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optionnel : ajoute une ombre */
+  
+}
+.dropdown-container select {/* TEXTE_LISTE_DEROULANTE */
+  font-size: 10px; /* Ajustez la taille de la police selon vos besoins */
+  font-weight: b;
+  padding: 5px; /* Ajoutez du rembourrage si nécessaire */
+}
+/* Conteneur pour la liste déroulante et le contrôle d'opacité */
+.control-container {
+  position: absolute;
+  top: 0px; /* Place les contrôles au-dessus de la carte */
+  left: 10px; /* Aligne avec la liste déroulante */
+  display: flex;
+  align-items: center;
+  z-index: 1000; /* S'assure que les contrôles sont au-dessus de la carte */
+}
+/* Style pour le Tooltip au survol */
+.hover-tooltip {
+  background-color: #008eb7 !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 5px !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) !important;
+  font-size: 10px !important;
+}
+
+/* Style pour le Tooltip visible en permanence au zoom */
+.zoom-tooltip {
+  background-color: #008eb7 !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border: 1px solid #999999 !important;
+  border-radius: 5px !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) !important;
+  font-size: 10px !important;
+  opacity: 0.6 !important; /* Légère transparence */
+}
+.treatment-center-tooltip {
+  background-color: orange !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border: 1px solid #ff8c00 !important;
+  border-radius: 3px !important;
+  font-size: 10px !important;
+  opacity: 0.6 !important; /* Légère transparence */
+}
+
+
+.quantity-tooltip {
+  background-color: lightgrey !important; /* Fond transparent pour se superposer */
+  color: #008eb7 !important; /* Texte en rouge */
+  font-weight: bold; /* Texte en gras pour plus de visibilité */
+  font-size: 10px !important; /* Taille du texte */
+  text-align: center; /* Centre le texte à l'intérieur */
+  padding: 0 !important; /* Supprime les marges */
+  border: none !important; /* Supprime les bordures */
+  box-shadow: none !important; /* Supprime l'ombre */
+}
+
+/* Style pour la légende */
+.legend {
+  position: absolute;
+  bottom: 55px; /* Positionne la légende en bas de la carte */
+  left: 30px; /* Décalage depuis le bord gauche */
+  background-color: #008eb7; /* Fond blanc pour la légende */
+  border: 1px solid #ccc; /* Bordure légère pour démarquer la légende */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 10px; /* Espace intérieur pour le texte */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de flottement */
+  font-size: 10px; /* Taille de police */
+  color: white; /* Couleur de texte */
+  z-index: 1000; /* Assure que la légende reste au-dessus de la carte */
+}
+
+.legend p {
+  margin: 0; /* Enlève les marges autour du texte pour un rendu compact */
+  text-align: left; /* Centre le texte dans la légende */
+}
+
+/* Style pour la légende */
+.Table_info {
+  position: absolute;
+  bottom: 120px; /* Positionne la légende en bas de la carte */
+  left: 30px; /* Décalage depuis le bord gauche */
+  background-color: #008eb7; /* Fond bleu pour la légende */
+  border: 1px solid #ccc; /* Bordure légère pour démarquer la légende */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 10px; /* Espace intérieur pour le texte */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de flottement */
+  font-size: 10px; /* Taille de police */
+  color: white; /* Couleur de texte */
+  z-index: 1000; /* Assure que la légende reste au-dessus de la carte */
+}
+
+.Table_info p {
+  margin: 0; /* Enlève les marges autour du texte pour un rendu compact */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.Table_info table {
+  width: 100%; /* Utilise toute la largeur disponible */
+  border-collapse: collapse; /* Supprime les espaces entre les cellules */
+  margin-top: 5px; /* Espace entre le paragraphe et le tableau */
+}
+
+.Table_info th,
+.Table_info td {
+  padding: 4px; /* Espace à l'intérieur des cellules */
+  text-align: left; /* Aligne le texte à gauche dans toutes les cellules */
+  color: white; /* Couleur du texte */
+}
+
+.Table_info th {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc; /* Bordure en bas pour séparer l'en-tête */
+}
+
+.Table_info td {
+  border-bottom: 1px solid #ccc; /* Bordure en bas des cellules pour séparer les lignes */
+}
+
+
+/* Couleur AIDE : #008eb7 et #7AC6E8  */
+
+
