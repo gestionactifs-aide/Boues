@@ -12,15 +12,22 @@ const MapComponent = () => {
   const [mapOpacity, setMapOpacity] = useState(0.5);
   const minZoomForQuantities = 11;
 
-  useEffect(() => {
-    fetch('/AIDE_Secteur.json')
-      .then(response => response.json())
-      .then(data => setSecteurData(data));
+useEffect(() => {
+  fetch(`${process.env.PUBLIC_URL}/AIDE_Secteur.json`)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Secteur Data:', data); // Pour vérifier dans la console si les données sont chargées
+      setSecteurData(data);
+    });
 
-    fetch('/AIDE_Trajets_boues.json')
-      .then(response => response.json())
-      .then(data => setTrajetsData(data));
-  }, []);
+  fetch(`${process.env.PUBLIC_URL}/AIDE_Trajets_boues.json`)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Trajets Data:', data); // Pour vérifier dans la console si les données sont chargées
+      setTrajetsData(data);
+    });
+}, []);
+
 
   const center = [50.3, 5.8];
 
